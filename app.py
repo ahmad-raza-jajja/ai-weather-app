@@ -1,11 +1,10 @@
 import streamlit as st
 import requests
-from dotenv import load_dotenv
 import os
 
-# Load API key from .env
-load_dotenv()
-API_KEY = os.getenv("OPENWEATHER_API_KEY")
+# Streamlit Secrets se API key lo
+API_KEY = st.secrets["OPENWEATHER_API_KEY"]
+
 
 st.set_page_config(page_title="🌤️ Weather App", page_icon="🌤️")
 st.title("🌤️ Weather App")
